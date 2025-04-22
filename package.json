@@ -1,0 +1,23 @@
+{
+  "name": "pf2e-warhammer-fantasy-corruptions",
+  "version": "1.0.0",
+  "description": "A Foundry VTT add-on implementing Warhammer Fantasy-inspired house rules for the PF2e system.",
+  "repository": "https://github.com/m1nque/pf2e-warhammer-fantasy-corruptions.git",
+  "author": "m1nque",
+  "license": "MIT",
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@illandril/foundryvtt-types": "^8.1.2",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "esbuild": "^0.25.2",
+    "eslint": "^9.25.1",
+    "eslint-plugin-import": "^2.31.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  }
+}
