@@ -1,6 +1,6 @@
 import '@illandril/foundryvtt-types';
 
-Hooks.on("renderSceneConfig", (app, html, data) => {
+Hooks.on("renderSceneConfig", (app, html) => {
   // Scene 설정창이 열릴 때
 
   const corruptionFieldHtml = `
