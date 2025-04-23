@@ -14,19 +14,15 @@ export function localize(key: string): string {
  */
 Hooks.once('init', () => {
   console.log(`${config.MODULE_ID} | Initializing ${config.MODULE_NAME}`);
+  CONFIG.debug.hooks = true;
+
 
   if (game.system.id !== 'pf2e') {
     console.warn(`${config.MODULE_ID} | This module is only compatible with the PF2E system.`);
     return;
   }
 
-  // Register settings
-  game.settings.register(config.MODULE_ID, 'setting1', {
-    name: localize('settings.setting1.name'),
-    hint: localize('settings.setting1.hint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: false,
-  });
+  // TODO Register settings
+
+  
 });

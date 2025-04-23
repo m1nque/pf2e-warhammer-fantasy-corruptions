@@ -1,8 +1,11 @@
 {
   "CHAOS_CORRUPTION": {
     "Setting": {
-      "name": "Warhammer Fantasy Chaos Corruption for Pathfinder 2e",
-      "source": "pf2e-warhammer-fantasy-corruptions"
+      "setting": {
+        "name": "Warhammer Fantasy Chaos Corruption for Pathfinder 2e",
+        "hint": "This module implements Warhammer Fantasy-inspired house rules for the PF2e system.",
+        "source": "pf2e-warhammer-fantasy-corruptions"
+      }
     },
     "DamageType": {
       "warp": "Warp"

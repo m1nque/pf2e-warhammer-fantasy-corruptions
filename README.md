@@ -8,6 +8,40 @@
 
 ## 📌 Features
 
+This module introduces custom traits and damage types to reflect the thematic corruption mechanics of a grim, chaos-twisted world.
+All mechanics are built using the official PF2e pf2e-homebrew framework and fully support localization.
+
+> 이 모듈은 혼돈에 물든 어두운 세계를 반영하기 위해
+커스텀 트레잇과 피해 유형을 추가로 도입합니다.
+PF2e의 공식 pf2e-homebrew 기능을 활용해 제작되었으며,
+다국어 로컬라이징을 완전히 지원합니다.
+
+### 💀 Damage Type
+
+**Warp**  
+*Damage Category: `energy`*
+
+A new energy-type damage representing the destructive essence of the Warp.  
+Its touch unravels both body and soul, bypassing mundane defenses.
+
+> 워프는 감정과 광기가 뒤섞인 혼돈의 차원에서 흘러나오는 에너지입니다.  
+> 육체와 영혼 모두를 침식시키며, 일반적인 방어를 무시합니다.
+
+### 🧬 Trait
+Chaos
+Trait Type: creature
+
+This creature is aligned with the corrupting powers of Chaos, embodying entropy, madness, and the will of the dark gods.
+
+이 생명체는 카오스의 타락한 힘과 어둠의 신들의 의지에 동조하며,
+무질서와 광기를 구현합니다.
+
+
+### 🌐 Localization & System Integration
+
+Fully supports English(en) and Korean(ko). Automatically injected into PF2e via flags.pf2e-homebrew. Cleanly integrated using translation keys and module configuration
+
+> 영어 및 한국어를 지원합니다. PF2e 시스템에 자동 통합되며, 번역 키 및 모듈 설정 기반 구조화가 준비되었습니다.
 
 ## 📘 Lore & Influence
 
