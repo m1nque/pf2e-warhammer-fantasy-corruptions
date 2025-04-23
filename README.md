@@ -11,11 +11,11 @@
 
 ## 📘 Lore & Influence
 
-This module is thematically inspired by classic grimdark fantasy settings that depict chaos as a mutagenic and spiritual force of destruction.  
-All names and mechanics are original or adapted for fan-use only.
+This module is thematically inspired by **Warhammer Fantasy** settings that depict chaos as a mutagenic and spiritual force of destruction.  
+All mechanics are original or adapted for fan-use only.
 
-> 이 모듈은 광기, 타락, 변이 등을 주제로 한 어두운 판타지 세계관에서 영감을 받았습니다.  
-> 모든 이름과 규칙은 창작 또는 팬활동 목적으로 각색된 것입니다.
+> 이 모듈은 광기, 타락, 변이 등을 주제로 한 워해머 판타지 세계관에서 영감을 받았습니다.  
+> 모든 규칙은 창작 또는 팬활동 목적으로 제작, 각색된 것입니다.
 
 ## 🛡️ License & Copyright / 라이선스 및 저작권 고지
 
