@@ -1,10 +1,10 @@
 # Chaos Corruptions for Pathfinder 2e (FoundryVTT Module)
 
-A fan-made corruption & chaos-themed condition module for PF2e on FoundryVTT.  
-Inspired by grim fantasy worlds of madness, mutation, and the power of ruin.
+> A fan-made homebrew condition and trait module for Pathfinder 2e,  
+> inspired by **Warhammer Fantasy**'s themes of corruption, mutation, and dark divinity.
 
-> 팬메이드로 제작된 패스파인더 2e용 FoundryVTT 상태 이펙트 확장 모듈입니다.  
-> 광기와 타락, 변이를 주제로 하는 어두운 판타지 세계관에 영감을 받았습니다.
+> 워해머 판타지 세계관에서 영감을 받아 제작된 패스파인더 2e용 팬메이드 확장 모듈입니다.  
+> 타락, 변이, 어둠의 신성을 테마로 한 컨디션과 트레잇 시스템을 제공합니다.
 
 ## 📌 Features
 
