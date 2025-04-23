@@ -1,3 +1,20 @@
 {
+    "corruptions": {
+      "damageType": {
+        "warp": "Warp"
+      },
+      "damageTypeDescription": {
+        "warp": "Warp Damage Type"
+      },
+      "creatureTrait": {
+        "chaos": "Chaos",
+        "warpTainted": "Warp-Tainted"
+      },
+      "creatureTraitDescription": {
+        "chaos": "This creature is aligned with the corrupting powers of Chaos, embodying entropy, madness, and the will of the dark gods.",
+        "warpTainted": "This creature has been permanently tainted by the energies of the Warp, a chaotic dimension of raw emotion and change."
+      }
+    }
+  }
   
-}
+  

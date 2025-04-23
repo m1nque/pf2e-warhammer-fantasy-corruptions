@@ -13,20 +13,54 @@
   ],
   "systems": ["pf2e"],
   "esmodules": ["dist/module.js"],
-  "packs": [
-    {
-      "name": "Corruption-Conditions",
-      "label": "Corruption Conditions",
-      "path": "packs/corruption-condition.db",
-      "type": "Item"
-    },
-    {
-      "name": "Corruption-Traits",
-      "label": "Corruption Traits",
-      "path": "packs/corruption-trait.db",
-      "type": "Item"
+  "flags": {
+    "pf2e-warhammer-fantasy-corruptions-homebrew": {
+      "pf2e-homebrew": {
+        "creatureTraits": {
+          "chaos": {
+            "name": "corruptions.CreatureTraits.chaos",
+            "description": "CORRUPTIONS.DamageTypeDescription.warp",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          },
+          "warpTainted": {
+            "name": "corruptions.CreatureTraits.warpTainted",
+            "description": "corruptions.creatureTraitDescription.warpTainted",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          }
+        },
+        "damageTypes": {
+          "warp": {
+            "name": "corruptions.DamageType.warp",
+            "category": "energy",
+            "description": "corruptions.DamageTypeDescription.warp",
+            "source": "pf2e-warhammer-fantasy-corruptions",
+            "icon": "fa-radiation"
+          }
+        },
+        "equipmentTraits": {
+          "warp": {
+            "name": "Warp",
+            "description": "Warp Equipment Trait",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          }
+        },
+        "weaponTraits": {
+          "warp": {
+            "name": "Warp",
+            "description": "Warp Equipment Trait",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          }
+        },
+        "spellTraits": {
+          "warp": {
+            "name": "Warp Spell",
+            "description": "Warp Spell Trait",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          }
+        }
+      }
     }
-  ],
+  },
   "languages": [
     {
       "lang": "en",
