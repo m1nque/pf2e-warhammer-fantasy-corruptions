@@ -8,10 +8,10 @@
   "scripts": {
     "build": "node esbuild.config.mjs",
     "lint": "eslint src --ext .ts",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build:release": "yarn build && zip -r ./pf2e-warhammer-fantasy-corruptions.zip module.json lang dist README.md LICENSE"
   },
   "devDependencies": {
-    "@illandril/foundryvtt-types": "^8.1.2",
     "@typescript-eslint/eslint-plugin": "^8.31.0",
     "@typescript-eslint/parser": "^8.31.0",
     "esbuild": "^0.25.2",
@@ -19,5 +19,6 @@
     "eslint-plugin-import": "^2.31.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
-  }
+  },
+  "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538"
 }

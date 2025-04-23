@@ -18,21 +18,41 @@
       "pf2e-homebrew": {
         "creatureTraits": {
           "chaos": {
-            "name": "corruptions.CreatureTraits.chaos",
-            "description": "CORRUPTIONS.DamageTypeDescription.warp",
+            "name": "CHAOS_CORRUPTION.CreatureTraits.chaos",
+            "description": "CHAOS_CORRUPTION.DamageTypeDescription.warp",
             "source": "pf2e-warhammer-fantasy-corruptions"
           },
           "warpTainted": {
-            "name": "corruptions.CreatureTraits.warpTainted",
-            "description": "corruptions.creatureTraitDescription.warpTainted",
+            "name": "CHAOS_CORRUPTION.CreatureTraits.warpTainted",
+            "description": "CHAOS_CORRUPTION.creatureTraitDescription.warpTainted",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          },
+          "khorne": {
+            "name": "CHAOS_CORRUPTION.CreatureTraits.khorne",
+            "description": "CHAOS_CORRUPTION.creatureTraitDescription.khorne",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          },
+          "nurgle": {
+            "name": "CHAOS_CORRUPTION.CreatureTraits.nurgle",
+            "description": "CHAOS_CORRUPTION.creatureTraitDescription.nurgle",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          },
+          "tzeentch": {
+            "name": "CHAOS_CORRUPTION.CreatureTraits.tzeentch",
+            "description": "CHAOS_CORRUPTION.creatureTraitDescription.tzeentch",
+            "source": "pf2e-warhammer-fantasy-corruptions"
+          },
+          "slaneesh": {
+            "name": "CHAOS_CORRUPTION.CreatureTraits.slaneesh",
+            "description": "CHAOS_CORRUPTION.creatureTraitDescription.slaneesh",
             "source": "pf2e-warhammer-fantasy-corruptions"
           }
         },
         "damageTypes": {
           "warp": {
-            "name": "corruptions.DamageType.warp",
+            "name": "CHAOS_CORRUPTION.DamageType.warp",
             "category": "energy",
-            "description": "corruptions.DamageTypeDescription.warp",
+            "description": "CHAOS_CORRUPTION.DamageTypeDescription.warp",
             "source": "pf2e-warhammer-fantasy-corruptions",
             "icon": "fa-radiation"
           }
@@ -46,15 +66,15 @@
         },
         "weaponTraits": {
           "warp": {
-            "name": "Warp",
-            "description": "Warp Equipment Trait",
+            "name": "CHAOS_CORRUPTION.WeaponTraits.warp",
+            "description": "CHAOS_CORRUPTION.WeaponTraitDescription.warp",
             "source": "pf2e-warhammer-fantasy-corruptions"
           }
         },
         "spellTraits": {
           "warp": {
-            "name": "Warp Spell",
-            "description": "Warp Spell Trait",
+            "name": "CHAOS_CORRUPTION.WeaponSpellTraits.warp",
+            "description": "CHAOS_CORRUPTION.WeaponSpellTraitDescription.warp",
             "source": "pf2e-warhammer-fantasy-corruptions"
           }
         }

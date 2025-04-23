@@ -1,20 +1,42 @@
 {
-    "corruptions": {
-      "damageType": {
-        "warp": "Warp"
-      },
-      "damageTypeDescription": {
-        "warp": "Warp Damage Type"
-      },
-      "creatureTrait": {
-        "chaos": "Chaos",
-        "warpTainted": "Warp-Tainted"
-      },
-      "creatureTraitDescription": {
-        "chaos": "This creature is aligned with the corrupting powers of Chaos, embodying entropy, madness, and the will of the dark gods.",
-        "warpTainted": "This creature has been permanently tainted by the energies of the Warp, a chaotic dimension of raw emotion and change."
-      }
+  "CHAOS_CORRUPTION": {
+    "Setting": {
+      "name": "Warhammer Fantasy Chaos Corruption for Pathfinder 2e",
+      "source": "pf2e-warhammer-fantasy-corruptions"
+    },
+    "DamageType": {
+      "warp": "Warp"
+    },
+    "DamageTypeDescription": {
+      "warp": "Warp Damage Type"
+    },
+    "CreatureTrait": {
+      "chaos": "Chaos",
+      "warpTainted": "Warp-Tainted",
+      "nurgle": "Nurgle",
+      "tzeentch": "Tzeentch",
+      "slaneesh": "Slaneesh",
+      "khorne": "Chorne"
+    },
+    "CreatureTraitDescription": {
+      "chaos": "This creature is aligned with the corrupting powers of Chaos, embodying entropy, madness, and the will of the dark gods.",
+      "warpTainted": "This creature has been permanently tainted by the energies of the Warp, a chaotic dimension of raw emotion and change.",
+      "nurgle": "This creature is a servant of Nurgle, the Chaos God of decay and disease, embodying rot and pestilence.",
+      "tzeentch": "This creature is a servant of Tzeentch, the Chaos God of change and magic, embodying transformation and manipulation.",
+      "slaneesh": "This creature is a servant of Slaneesh, the Chaos God of pleasure and excess, embodying hedonism and indulgence.",
+      "khorne": "This creature is a servant of Chorne, the Chaos God of war and bloodshed, embodying violence and brutality."
+    },
+    "WeaponTrait": {
+      "warp": "Warp"
+    },
+    "WeaponTraitDescription": {
+      "warp": "Warp Weapon"
+    },
+    "WeaponSpellTrait": {
+      "warp": "Warp Spell"
+    },
+    "WeaponSpellTraitDescription": {
+      "warp": "Warp Spell Trait"
     }
   }
-  
-  
+}
