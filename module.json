@@ -9,7 +9,7 @@
     "maximum": "12"
   },
   "authors": [
-    { 
+    {
       "name": "Min-Q",
       "discord": "m1nque"
     }
@@ -23,41 +23,83 @@
       }
     ]
   },
+  "requires": [
+    {
+      "id": "lib-wrapper",
+      "type": "module",
+      "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.13.2.0/module.json",
+      "compatibility": {
+        "verified": "1.13.2.0"
+      }
+    }
+  ],
   "esmodules": ["dist/module.js"],
+  "packFolders": [
+    {
+      "name": "Chaos Corruptions",
+      "packs": ["chaos-conditions", "chaos-auras"]
+    }
+  ],
+  "packs": [
+    {
+      "name": "chaos-conditions",
+      "label": "Chaos Conditions",
+      "path": "packs/chaos-conditions",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pf2e",
+      "flags": {}
+    },
+    {
+      "name": "chaos-auras",
+      "label": "Chaos Auras",
+      "path": "packs/chaos-auras",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pf2e",
+      "flags": {}
+    }
+  ],
   "flags": {
     "pf2e-warhammer-fantasy-corruptions": {
       "pf2e-homebrew": {
         "creatureTraits": {
           "chaos": {
             "label": "Chaos",
-            "description": "CHAOS_CORRUPTION.CreatureTraitDescription.chaos"
+            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.chaos"
           },
           "warpTainted": {
             "label": "Warp-Tainted",
-            "description": "CHAOS_CORRUPTION.CreatureTraitDescription.warpTainted"
+            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.warpTainted"
           },
           "khorne": {
             "label": "Khorne",
-            "description": "CHAOS_CORRUPTION.CreatureTraitDescription.khorne"
+            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.khorne"
           },
           "nurgle": {
             "label": "Nurgle",
-            "description": "CHAOS_CORRUPTION.CreatureTraitDescription.nurgle"
+            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.nurgle"
           },
           "tzeentch": {
             "label": "Tzeentch",
-            "description": "CHAOS_CORRUPTION.CreatureTraitDescription.tzeentch"
+            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.tzeentch"
           },
           "slaneesh": {
             "label": "Slaneesh",
-            "description": "CHAOS_CORRUPTION.CreatureTraitDescription.slaneesh"
+            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.slaneesh"
           }
         },
         "damageTypes": {
           "warp": {
             "label": "Warp",
             "category": "energy",
-            "description": "CHAOS_CORRUPTION.DamageTypeDescription.warp",
+            "description": "pf2e-warhammer-fantasy-corruptions.DamageTypeDescription.warp",
             "icon": "fa-radiation"
           }
         },
@@ -70,13 +112,13 @@
         "weaponTraits": {
           "warp": {
             "label": "Warp",
-            "description": "CHAOS_CORRUPTION.WeaponTraitDescription.warp"
+            "description": "pf2e-warhammer-fantasy-corruptions.WeaponTraitDescription.warp"
           }
         },
         "spellTraits": {
           "warp": {
             "label": "Warp",
-            "description": "CHAOS_CORRUPTION.WeaponSpellTraitDescription.warp"
+            "description": "pf2e-warhammer-fantasy-corruptions.WeaponSpellTraitDescription.warp"
           }
         }
       }

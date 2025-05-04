@@ -1,10 +1,26 @@
 {
-  "CHAOS_CORRUPTION": {
-    "Setting": {
-      "setting": {
-        "name": "Warhammer Fantasy Chaos Corruption for Pathfinder 2e",
-        "hint": "This module implements Warhammer Fantasy-inspired house rules for the PF2e system.",
-        "source": "pf2e-warhammer-fantasy-corruptions"
+  "pf2e-warhammer-fantasy-corruptions": {
+    "settings": {
+      "name": "Warhammer Fantasy Chaos Corruption Module for PF2e",
+      "hint": "This module implements house rules inspired by Warhammer Fantasy's Chaos corruption mechanics for Pathfinder 2e.",
+      "source": "pf2e-warhammer-fantasy-corruptions",
+      "debug": {
+        "name": "Debug Mode",
+        "hint": "Enable debug mode. This is intended for development and troubleshooting only, and is not recommended for general gameplay."
+      },
+      "notifyChat": {
+        "name": "Show Corruption Messages in Chat",
+        "hint": "Display descriptive chat messages based on the specific effects of Chaos corruption."
+      },
+      "autoIncrease": {
+        "name": "Auto-Increase Corruption Stacks",
+        "hint": "Automatically increase Chaos corruption stacks when a creature is within the range of a Chaos aura."
+      }
+    },
+    "scene": {
+      "corruptionDC": {
+        "label": "Chaos Resistance DC",
+        "hint": "The DC for resisting Chaos corruption effects."
       }
     },
     "DamageType": {
@@ -19,7 +35,7 @@
       "nurgle": "Nurgle",
       "tzeentch": "Tzeentch",
       "slaneesh": "Slaneesh",
-      "khorne": "Chorne"
+      "khorne": "Khorne"
     },
     "CreatureTraitDescription": {
       "chaos": "This creature is aligned with the corrupting powers of Chaos, embodying entropy, madness, and the will of the dark gods.",

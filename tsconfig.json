@@ -10,7 +10,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "types": ["@league-of-foundry-developers/foundry-vtt-types"],
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

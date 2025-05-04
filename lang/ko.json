@@ -1,10 +1,26 @@
 {
-  "CHAOS_CORRUPTION": {
-    "Setting": {
-      "setting": {
-        "name": "패스파인더 2e용 워해머 판타지 카오스 오염 모듈",
-        "hint": "이 모듈은 워해머 판타지에서 영감을 받은 PF2e 전용 하우스 룰을 구현합니다.",
-        "source": "pf2e-warhammer-fantasy-corruptions"
+  "pf2e-warhammer-fantasy-corruptions": {
+    "settings": {
+      "name": "패스파인더 2e용 워해머 판타지 카오스 오염 모듈",
+      "hint": "이 모듈은 워해머 판타지에서 영감을 받은 PF2e 전용 하우스 룰을 구현합니다.",
+      "source": "pf2e-warhammer-fantasy-corruptions",
+      "debug": {
+        "name": "디버깅 모드",
+        "hint": "디버깅 모드를 활성화합니다. 이 모드는 개발 및 디버깅 목적으로만 사용해야 하며, 일반 사용자에게는 권장되지 않습니다."
+      },
+      "notifyChat": {
+        "name": "오염 메시지 채팅 표시",
+        "hint": "카오스 오염별 상황에 맞는 메시지를 채팅에 표시합니다."
+      },
+      "autoIncrease": {
+        "name": "오염 스택 자동 증가",
+        "hint": "크리처가 카오스 오오라 범위 내에 있을 경우, 카오스 오염 스택을 자동으로 증가시킵니다."
+      }
+    },
+    "scene": {
+      "corruptionDC": {
+        "label": "카오스 저항 DC",
+        "hint": "카오스 오염 저항 시 난이도입니다."
       }
     },
     "DamageType": {
