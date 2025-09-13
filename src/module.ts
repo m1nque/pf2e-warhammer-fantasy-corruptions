@@ -5,6 +5,10 @@ import {
   khorneCorruptionRoll,
   nurgleCorruptionRoll
 } from './hookEvents/corruptions';
+import {
+  initCorruptionLayer,
+  updateCorruptionVisuals
+} from './hookEvents/scene';
 
 /**
  * 로컬라이즈 헬퍼
@@ -51,7 +55,10 @@ Hooks.once('init', () => {
   // if (game.settings.get(config.MODULE_ID, 'notifyChat')) {
   //   CONFIG.debug.hooks = true;
   // }
-  CONFIG.debug.hooks = true;
+  // 디버그 모드 활성화 (FoundryVTT v13에서는 전역 CONFIG 객체를 통해 접근)
+  if (typeof CONFIG !== 'undefined') {
+    CONFIG.debug.hooks = true;
+  }
 
   if (game.system.id !== 'pf2e') {
     console.warn(
@@ -139,3 +146,43 @@ Hooks.on('preUpdateScene', (scene, updateData) => {
 //   }
 //   return message;
 // });
+
+// 씬이 로드될 때 오염도 시각화 레이어 생성
+Hooks.once('canvasReady', initCorruptionLayer);
+
+// 토큰 선택 시 오염도 시각화 업데이트
+Hooks.on('controlToken', (token, controlled) => {
+  updateCorruptionVisuals(token, controlled);
+});
+
+// 아이템 업데이트 시 오염도 시각화 업데이트
+Hooks.on('updateItem', (item, changes, options, userId) => {
+  // badge 값이 변경되었는지 확인
+  if (changes.system?.badge?.value !== undefined) {
+    // 오염 관련 아이템인지 확인
+    const isCorruptionItem =
+      item.system?.slug?.includes('chaos-corruptions') &&
+      item.system?.slug?.includes('corruption');
+
+    if (isCorruptionItem) {
+      // 아이템이 속한 액터 찾기
+      const actor = item.parent;
+      if (!actor) return;
+
+      // 액터의 토큰 찾기
+      const tokens = canvas.tokens.placeables.filter(
+        (t) => t.actor?.id === actor.id
+      );
+
+      // 각 토큰에 대해 선택 상태 확인 후 시각화 업데이트
+      tokens.forEach((token) => {
+        if (token.controlled) {
+          console.log(
+            `${config.MODULE_ID} | Updating corruption visuals for ${token.name} due to badge change`
+          );
+          updateCorruptionVisuals(token, true);
+        }
+      });
+    }
+  }
+});

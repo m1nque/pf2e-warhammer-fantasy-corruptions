@@ -258,26 +258,6 @@ Hooks.once("canvasReady", initCorruptionLayer);
 Hooks.on("controlToken", (token, controlled) => {
   updateCorruptionVisuals(token, controlled);
 });
-Hooks.on("updateItem", (item, changes, options, userId) => {
-  if (changes.system?.badge?.value !== void 0) {
-    const isCorruptionItem = item.system?.slug?.includes("chaos-corruptions") && item.system?.slug?.includes("corruption");
-    if (isCorruptionItem) {
-      const actor = item.parent;
-      if (!actor) return;
-      const tokens = canvas.tokens.placeables.filter(
-        (t) => t.actor?.id === actor.id
-      );
-      tokens.forEach((token) => {
-        if (token.controlled) {
-          console.log(
-            `${config_default.MODULE_ID} | Updating corruption visuals for ${token.name} due to badge change`
-          );
-          updateCorruptionVisuals(token, true);
-        }
-      });
-    }
-  }
-});
 export {
   localize
 };

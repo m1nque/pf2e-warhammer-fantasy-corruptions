@@ -1,17 +1,18 @@
 {
   "id": "pf2e-warhammer-fantasy-corruptions",
   "title": "Chaos Corruptions",
-  "description": "A Foundry VTT add-on implementing Warhammer Fantasy-inspired house rules for the PF2e system.",
-  "version": "0.1.0",
+  "description": "<p>A Foundry VTT add-on implementing Warhammer Fantasy-inspired house rules for the PF2e system.</p>",
+  "version": "0.2.0",
   "compatibility": {
-    "minimum": "11",
-    "verified": "12",
-    "maximum": "12"
+    "minimum": "12",
+    "verified": "13",
+    "maximum": "13"
   },
   "authors": [
     {
       "name": "Min-Q",
-      "discord": "m1nque"
+      "discord": "m1nque",
+      "flags": {}
     }
   ],
   "relationships": {
@@ -23,21 +24,13 @@
       }
     ]
   },
-  "requires": [
-    {
-      "id": "lib-wrapper",
-      "type": "module",
-      "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.13.2.0/module.json",
-      "compatibility": {
-        "verified": "1.13.2.0"
-      }
-    }
-  ],
   "esmodules": ["dist/module.js"],
   "packFolders": [
     {
       "name": "Chaos Corruptions",
-      "packs": ["chaos-conditions", "chaos-auras"]
+      "packs": ["chaos-conditions", "chaos-auras"],
+      "color": null,
+      "folders": []
     }
   ],
   "packs": [
@@ -46,24 +39,22 @@
       "label": "Chaos Conditions",
       "path": "packs/chaos-conditions",
       "type": "Item",
+      "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "pf2e",
-      "flags": {}
+      }
     },
     {
       "name": "chaos-auras",
       "label": "Chaos Auras",
       "path": "packs/chaos-auras",
       "type": "Item",
+      "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "pf2e",
-      "flags": {}
+      }
     }
   ],
   "flags": {
@@ -128,12 +119,14 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "ko",
       "name": "한국어",
-      "path": "lang/ko.json"
+      "path": "lang/ko.json",
+      "flags": {}
     }
   ]
 }
