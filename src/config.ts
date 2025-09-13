@@ -8,7 +8,7 @@ export const chaosTraits = [
   'tzeentch'
 ];
 
-export const defaultCorruptionDC = 15; // 기본 DC 값 설정
+export const defaultCorruptionDC = 17; // 기본 DC 값 설정
 
 export default {
   MODULE_ID: 'pf2e-warhammer-fantasy-corruptions',

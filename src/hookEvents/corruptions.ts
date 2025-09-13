@@ -134,6 +134,10 @@ export const checkCorruptionAuras = async (
     'chaos-corruptions-tzeentch-aura': 'chaos-corruptions-tzeentch-corruption'
   };
 
+  // 자동 증가 설정이 꺼져 있으면 종료
+  console.log(
+    `${config.MODULE_ID} | ${game.settings.get(config.MODULE_ID, 'autoIncrease')}`
+  );
   if (!game.settings.get(config.MODULE_ID, 'autoIncrease')) {
     return;
   }
@@ -146,6 +150,9 @@ export const checkCorruptionAuras = async (
   console.log(`${config.MODULE_ID} | affectedAuras`, affectedAuras);
   // console.log(`affectedAuras`, affectedAuras);
 
+  console.log(
+    `${config.MODULE_ID} | 오염 자동 증가 체크 ${game.settings.get(config.MODULE_ID, 'autoIncrease')}, 영향을 받는 오라 ${affectedAuras.length}`
+  );
   if (affectedAuras.length === 0) return; // 영향을 받는 오라가 없으면 종료
 
   for (const { auraSlug, from } of affectedAuras) {
@@ -179,6 +186,7 @@ export const checkCorruptionAuras = async (
     }
 
     // corruptionEffect.system.badge.value += 1; // 오염 스택 증가
+
     await corruptionEffect.update({
       'system.badge.value': corruptionEffect.system.badge.value + 1
     });

@@ -13,6 +13,19 @@ declare global {
     };
   };
 
+  // Babele 모듈 타입 정의
+  const Babele: {
+    get(): {
+      register(options: { module: string; lang: string; dir: string }): void;
+      registerConverters(
+        converters: {
+          convertItem: (item: any, mapping: any) => any;
+        },
+        pack: string
+      ): void;
+    };
+  };
+
   // libWrapper 모듈
   const libWrapper: {
     register: (

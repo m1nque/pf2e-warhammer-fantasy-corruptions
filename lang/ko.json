@@ -34,7 +34,7 @@
       "warpTainted": "워프 오염",
       "nurgle": "너글",
       "tzeentch": "젠취",
-      "slaneesh": "슬라네쉬",
+      "slaanesh": "슬라네쉬",
       "khorne": "코른"
     },
     "CreatureTraitDescription": {
@@ -42,8 +42,14 @@
       "warpTainted": "이 생명체는 감정과 변화가 일렁이는 워프 에너지에 영구히 오염되었습니다.",
       "nurgle": "이 생명체는 부패와 질병의 카오스 신, 너글의 하수인으로, 부식과 역병을 구현합니다.",
       "tzeentch": "이 생명체는 변화와 마법의 카오스 신, 젠취의 하수인으로, 변형과 음모를 구현합니다.",
-      "slaneesh": "이 생명체는 쾌락과 과잉의 카오스 신, 슬라네쉬의 하수인으로, 탐닉과 향락을 구현합니다.",
+      "slaanesh": "이 생명체는 쾌락과 과잉의 카오스 신, 슬라네쉬의 하수인으로, 탐닉과 향락을 구현합니다.",
       "khorne": "이 생명체는 전쟁과 유혈의 카오스 신, 코른의 하수인으로, 폭력과 잔혹함을 구현합니다."
+    },
+    "TraitDescription": {
+      "khorne": "Description for Khorne feat trait",
+      "nurgle": "Description for Nurgle feat trait",
+      "tzeentch": "Description for Tzeentch feat trait",
+      "slaanesh": "Description for Slaanesh feat trait"
     },
     "WeaponTrait": {
       "warp": "워프"
@@ -54,8 +60,76 @@
     "WeaponSpellTrait": {
       "warp": "워프 주문"
     },
-    "WeaponSpellTraitDescription": {
+    "SpellTraitDescription": {
       "warp": "워프의 불안정한 본질을 담고 있는 주문 속성입니다."
+    },
+    "EquipmentTrait": {
+      "warp": "워프"
+    },
+    "EquipmentTraitDescription": {
+      "warp": "워프 에너지로 제작되거나 영향을 받은 장비입니다."
+    },
+    "homebrew": {
+      "creatureTraits": {
+        "chaos": {
+          "label": "카오스",
+          "description": "이 생명체는 카오스의 타락한 힘과 어둠의 신들의 의지에 동조하며, 무질서와 광기를 구현합니다."
+        },
+        "warpTainted": {
+          "label": "워프 오염",
+          "description": "이 생명체는 감정과 변화가 일렁이는 워프 에너지에 영구히 오염되었습니다."
+        },
+        "khorne": {
+          "label": "코른",
+          "description": "이 생명체는 전쟁과 유혈의 카오스 신, 코른의 하수인으로, 폭력과 잔혹함을 구현합니다."
+        },
+        "nurgle": {
+          "label": "너글",
+          "description": "이 생명체는 부패와 질병의 카오스 신, 너글의 하수인으로, 부식과 역병을 구현합니다."
+        },
+        "tzeentch": {
+          "label": "젠취",
+          "description": "이 생명체는 변화와 마법의 카오스 신, 젠취의 하수인으로, 변형과 음모를 구현합니다."
+        },
+        "slaanesh": {
+          "label": "슬라네쉬",
+          "description": "이 생명체는 쾌락과 과잉의 카오스 신, 슬라네쉬의 하수인으로, 탐닉과 향락을 구현합니다."
+        }
+      },
+      "damageTypes": {
+        "warp": {
+          "label": "워프",
+          "category": "에너지",
+          "description": "워프 피해는 감정과 광기가 소용돌이치는 차원, 워프의 에너지에서 유래한 특수한 피해 유형입니다.",
+          "icon": "fa-radiation"
+        }
+      },
+      "equipmentTraits": {
+        "warp": {
+          "label": "워프",
+          "description": "워프 에너지로 제작되거나 영향을 받은 장비입니다."
+        }
+      },
+      "weaponTraits": {
+        "warp": {
+          "label": "워프",
+          "description": "워프 에너지가 깃든 무기입니다."
+        }
+      },
+      "spellTraits": {
+        "warp": {
+          "label": "워프",
+          "description": "워프의 불안정한 본질을 담고 있는 주문 속성입니다."
+        }
+      }
     }
+  },
+  "Compendium.pf2e-warhammer-fantasy-corruptions.chaos-conditions.Item.e9O8RhLrnzcfTqMG": {
+    "name": "너글 오염",
+    "description": "<p>너글, 역병의 신의 영향을 받은 캐릭터는 서서히 육체가 부패하며 질병에 대한 내성이 생깁니다.</p><p><strong>효과:</strong> 매 턴 시작 시, 강인 내성 굴림 DC @sceneCorruptionDC. 실패하면 오염도가 1 증가합니다.</p><p><strong>특수:</strong> 오염도 5에 도달하면 역병 보균자 특성을 얻습니다. 주변 5피트 이내의 적들은 매 턴마다 강인 내성 굴림 DC 15에 실패하면 1d4 독성 피해를 입습니다.</p>"
+  },
+  "Compendium.pf2e-warhammer-fantasy-corruptions.chaos-auras.Item.zpYOSna0YscmKTPR": {
+    "name": "너글 오염 오라",
+    "description": "<p>너글, 역병의 신의 존재는 주변을 오염시키는 부패의 힘을 내뿜습니다.</p><p><strong>오라:</strong> 이 효과의 영향 범위는 30피트입니다. 오라 내에 있는 적들은 매 턴마다 강인 내성 굴림 DC @sceneCorruptionDC에 실패하면 너글 오염 효과를 얻거나 기존 오염도가 1 증가합니다.</p>"
   }
 }

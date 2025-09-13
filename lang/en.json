@@ -43,7 +43,13 @@
       "nurgle": "This creature is a servant of Nurgle, the Chaos God of decay and disease, embodying rot and pestilence.",
       "tzeentch": "This creature is a servant of Tzeentch, the Chaos God of change and magic, embodying transformation and manipulation.",
       "slaneesh": "This creature is a servant of Slaneesh, the Chaos God of pleasure and excess, embodying hedonism and indulgence.",
-      "khorne": "This creature is a servant of Chorne, the Chaos God of war and bloodshed, embodying violence and brutality."
+      "khorne": "This creature is a servant of Khorne, the Chaos God of war and bloodshed, embodying violence and brutality."
+    },
+    "TraitDescription": {
+      "khorne": "Description for Khorne feat trait",
+      "nurgle": "Description for Nurgle feat trait",
+      "tzeentch": "Description for Tzeentch feat trait",
+      "slaneesh": "Description for Slaneesh feat trait"
     },
     "WeaponTrait": {
       "warp": "Warp"
@@ -54,8 +60,9 @@
     "WeaponSpellTrait": {
       "warp": "Warp Spell"
     },
-    "WeaponSpellTraitDescription": {
-      "warp": "Warp Spell Trait"
+    "SpellTraitDescription": {
+      "warp": "Warp Spell Trait",
+      "chaos": "Chaos Spell Trait"
     }
   }
 }

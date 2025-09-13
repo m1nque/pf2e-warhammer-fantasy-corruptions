@@ -73,7 +73,7 @@ Hooks.once('init', () => {
     async function (wrapped, content, options) {
       // 래퍼 함수
       const sceneDc =
-        canvas.scene?.getFlag(config.MODULE_ID, 'corruptionDC') ?? 15; //canvas.scene?.getFlag(pf2e-warhammer-fantasy-corruptions, 'corruptionDC')
+        canvas.scene?.getFlag(config.MODULE_ID, 'corruptionDC') ?? 17; //canvas.scene?.getFlag(pf2e-warhammer-fantasy-corruptions, 'corruptionDC')
       content = content.replace(
         /@ChaosCheck\[(.*?)\]\{(.*?)\}/g,
         (match, params, label) => {
@@ -96,9 +96,62 @@ Hooks.once('init', () => {
   // TODO Register settings
 });
 
+/**
+ * Babele 번역 설정 초기화
+ */
+function initializeBabeleTranslation() {
+  if (typeof Babele !== 'undefined') {
+    console.log(
+      `${config.MODULE_ID} | Initializing Babele translation support`
+    );
+
+    // 컴팬디움 번역 등록
+    Babele.get().register({
+      module: config.MODULE_ID,
+      lang: game.i18n.lang,
+      dir: 'lang'
+    });
+
+    // 팩별 번역 설정
+    ['chaos-conditions', 'chaos-auras', 'chaos-feats'].forEach((packName) => {
+      const pack = `${config.MODULE_ID}.${packName}`;
+      Babele.get().registerConverters(
+        {
+          convertItem: (item, mapping) => {
+            // 아이템 이름 및 설명 번역
+            if (mapping.name) item.name = mapping.name;
+            if (mapping.description)
+              item.system.description.value = mapping.description;
+
+            // 특성, 레벨 등 기타 필드 번역
+            if (mapping.traits) {
+              try {
+                const traits = JSON.parse(mapping.traits);
+                if (traits.value) item.system.traits.value = traits.value;
+              } catch (e) {
+                console.error(
+                  `${config.MODULE_ID} | Error parsing traits for ${item.name}:`,
+                  e
+                );
+              }
+            }
+
+            return item;
+          }
+        },
+        pack
+      );
+    });
+  } else {
+    console.warn(
+      `${config.MODULE_ID} | Babele module not found. Compendium translation disabled.`
+    );
+  }
+}
+
 function initializeHookEvents() {
-  Hooks.on('createChatMessage', khorneCorruptionRoll);
-  Hooks.on('pf2e.startTurn', nurgleCorruptionRoll);
+  // Hooks.on('createChatMessage', khorneCorruptionRoll);
+  // Hooks.on('pf2e.startTurn', nurgleCorruptionRoll);
   Hooks.on('pf2e.startTurn', checkCorruptionAuras);
 }
 
@@ -132,7 +185,7 @@ Hooks.on('preUpdateScene', (scene, updateData) => {
 
 // // 아이템 시트 렌더링 시 토큰 치환
 // Hooks.on('renderItemSheet', (app, html, data) => {
-//   const dc = canvas.scene?.getFlag(config.MODULE_ID, 'corruptionDC') ?? 15;
+//   const dc = canvas.scene?.getFlag(config.MODULE_ID, 'corruptionDC') ?? 17;
 //   html[0].querySelectorAll('.item-description').forEach((desc) => {
 //     desc.innerHTML = desc.innerHTML.replace(/@sceneCorruptionDC/g, dc);
 //   });
@@ -140,7 +193,7 @@ Hooks.on('preUpdateScene', (scene, updateData) => {
 
 // // 채팅 메시지 생성 전 토큰 치환
 // Hooks.on('preCreateChatMessage', (message, options, userId) => {
-//   const dc = canvas.scene?.getFlag(config.MODULE_ID, 'corruptionDC') ?? 15;
+//   const dc = canvas.scene?.getFlag(config.MODULE_ID, 'corruptionDC') ?? 17;
 //   if (message.content.includes('@sceneCorruptionDc')) {
 //     message.content = message.content.replace(/@sceneCorruptionDc/g, dc);
 //   }
@@ -149,6 +202,16 @@ Hooks.on('preUpdateScene', (scene, updateData) => {
 
 // 씬이 로드될 때 오염도 시각화 레이어 생성
 Hooks.once('canvasReady', initCorruptionLayer);
+
+// 게임이 준비되면 Babele 번역 초기화
+Hooks.once('ready', () => {
+  console.log(`${config.MODULE_ID} | Game is ready, initializing translations`);
+
+  // Babele 모듈 초기화
+  if (game.modules.get('babele')?.active) {
+    // initializeBabeleTranslation();
+  }
+});
 
 // 토큰 선택 시 오염도 시각화 업데이트
 Hooks.on('controlToken', (token, controlled) => {

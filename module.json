@@ -28,7 +28,7 @@
   "packFolders": [
     {
       "name": "Chaos Corruptions",
-      "packs": ["chaos-conditions", "chaos-auras"],
+      "packs": ["chaos-conditions", "chaos-auras", "chaos-feats"],
       "color": null,
       "folders": []
     }
@@ -55,11 +55,58 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "chaos-feats",
+      "label": "Chaos Feats",
+      "path": "packs/chaos-feats",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "flags": {
     "pf2e-warhammer-fantasy-corruptions": {
       "pf2e-homebrew": {
+        "featTraits": {
+          "FeatTraitKhorne": {
+            "label": "Khorne",
+            "description": "Description for Khorne feat trait"
+          },
+          "FeatTraitNurgle": {
+            "label": "Nurgle",
+            "description": "Description for Nurgle feat trait"
+          },
+          "FeatTraitTzeentch": {
+            "label": "Tzeentch",
+            "description": "Description for Tzeentch feat trait"
+          },
+          "FeatTraitSlaanesh": {
+            "label": "Slaanesh",
+            "description": "Description for Slaanesh feat trait"
+          }
+        },
+        "traits": {
+          "khorne": {
+            "label": "Khorne",
+            "description": "Description for Khorne trait"
+          },
+          "nurgle": {
+            "label": "Nurgle",
+            "description": "Description for Nurgle trait"
+          },
+          "tzeentch": {
+            "label": "Tzeentch",
+            "description": "Description for Tzeentch trait"
+          },
+          "slaanesh": {
+            "label": "Slaanesh",
+            "description": "Description for Slaanesh trait"
+          }
+        },
         "creatureTraits": {
           "chaos": {
             "label": "Chaos",
@@ -81,9 +128,9 @@
             "label": "Tzeentch",
             "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.tzeentch"
           },
-          "slaneesh": {
-            "label": "Slaneesh",
-            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.slaneesh"
+          "slaanesh": {
+            "label": "Slaanesh",
+            "description": "pf2e-warhammer-fantasy-corruptions.CreatureTraitDescription.slaanesh"
           }
         },
         "damageTypes": {
